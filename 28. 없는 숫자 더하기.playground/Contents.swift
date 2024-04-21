@@ -8,17 +8,13 @@
 import Foundation
 
 func solution(_ numbers:[Int]) -> Int {
-    var 다더해 = 0
-    var 영부터구 = Set<Int>(0...9)
-    for i in numbers {
-        영부터구.remove(i)
-    }
-    for 남은애 in 영부터구 {
-        다더해 += 남은애
-    }
-    return 다더해
+    Array(0...9).filter {!numbers.contains($0)}.reduce(0, +)
 }
-//numbers에 없는애를 찾기
-//걔네 더하기
 
-print(solution([5,8,4,0,6,7,9]))
+/*---------*/
+
+func solution2(_ numbers: [Int]) -> Int {
+    let numberSet = Set(numbers)
+    return Array(0...9).filter { !numberSet.contains($0) }.reduce(0, +)
+}//set 한 줄 추가로 효율성 최적화
+
