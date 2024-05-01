@@ -6,10 +6,6 @@
 //let s1 = readLine()!
 //let str = "str"
 
-
-import Foundation
-
-
 import Foundation
 
 print("문자열을 입력하세요:")
