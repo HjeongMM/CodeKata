@@ -14,7 +14,6 @@ func solution(_ babbling: [String]) -> Int {
             var found = false
             for sound in validWords {
                 if tempWord.hasPrefix(sound) {
-                    // 같은 발음이 연속되면 유효하지 않음
                     if sound == prevSound {
                         isValid = false
                         break
